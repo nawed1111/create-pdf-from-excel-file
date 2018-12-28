@@ -30,7 +30,7 @@ public class pdfCreator {
         float startX = pageSize.getLowerLeftX() + margin;
         float startY = pageSize.getUpperRightY() - margin;
         
-	    	FileInputStream f1 = new FileInputStream(new File("D:\\excel\\Writesheet.xlsx"));
+	    	FileInputStream f1 = new FileInputStream(new File("path"));
 	        XSSFWorkbook wb = new XSSFWorkbook(f1);
 	    	 PDDocument document = new PDDocument();
 	    	 Locator loc = new Locator();
@@ -59,7 +59,6 @@ public class pdfCreator {
 	        		 contentStream.showText(text+"       ");	 
 	     	      }
 	                contentStream.newLineAtOffset(0, -leading);
-//	                Each time a new line has been added, the spaceLeft is decreased by leading
 	                spaceLeft -= leading;
 	                if(spaceLeft <= margin){
 	                	contentStream.endText();
@@ -78,8 +77,7 @@ public class pdfCreator {
 	         contentStream.close();	         
 	    } 
 	  }      
-	         document.save("D:\\PDF\\my_doc1.pdf");
-	         System.out.println("PDF created");
+	         document.save("path");
 	         
 	         wb.close();
 	         document.close();	
