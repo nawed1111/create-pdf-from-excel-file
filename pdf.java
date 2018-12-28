@@ -21,7 +21,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 public class pdf {
 	
 	public static void main(String[] args) throws Exception{
-		FileInputStream f1 = new FileInputStream(new File("path"));
+		FileInputStream f1 = new FileInputStream(new File("excel file path"));
         XSSFWorkbook wb = new XSSFWorkbook(f1);
         
         Locator loc = new Locator();
