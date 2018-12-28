@@ -21,7 +21,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 public class pdf {
 	
 	public static void main(String[] args) throws Exception{
-		FileInputStream f1 = new FileInputStream(new File("D:\\excel\\Writesheet.xlsx"));
+		FileInputStream f1 = new FileInputStream(new File(path));
         XSSFWorkbook wb = new XSSFWorkbook(f1);
         
         Locator loc = new Locator();
@@ -61,7 +61,7 @@ public class pdf {
 	        		 }
 	     	      }
 	          }
-	         PdfWriter.getInstance(document, new FileOutputStream("D:\\PDF\\my_doc"+i+".pdf"));
+	         PdfWriter.getInstance(document, new FileOutputStream(path));
 				document.open();
 				document.add(table);
 				document.close();
