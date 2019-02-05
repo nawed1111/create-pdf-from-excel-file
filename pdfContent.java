@@ -5,7 +5,7 @@ import java.io.IOException;
 
 public class pdfContent {
 
-    private static final String FILE_NAME = "C:\\Users\\Nawed Anjum\\Pictures\\Monawwer\\Employee Photo ID and Access Card Requisition Form_locked_.pdf";
+    private static final String FILE_NAME = "path\\abc.pdf";
 
     public static void main(String[] args) {
 
